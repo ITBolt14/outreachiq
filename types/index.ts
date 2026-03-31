@@ -24,6 +24,20 @@ export interface Contact {
     source: string;
 }
 
+export interface SavedLead {
+    id: string;
+    place_id: string;
+    business_name: string;
+    address: string;
+    phone: string;
+    website: string;
+    rating: number;
+    category: string;
+    latitude: number;
+    longitude: number;
+    saved_at: string;
+}
+
 export interface SearchFilters {
     keyword: string;
     location: string;
@@ -37,4 +51,19 @@ export interface SearchResult {
         lat: number;
         lng: number;
     };
+}
+
+export interface HunterContact {
+    first_name: string;
+    last_name: string;
+    title: string;
+    email: string;
+    confidence_score: number;
+    linkedin_url?:string;
+}
+
+export interface HunterResult {
+    domain: string;
+    company: string;
+    contacts: HunterContact[];
 }
